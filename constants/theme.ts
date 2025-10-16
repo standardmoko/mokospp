@@ -30,8 +30,8 @@ export const Colors = {
 
 // Legacy fonts - use Typography from globalStyles.ts for new components
 export const Fonts = {
-  sans: 'Poppins',
-  serif: 'Poppins',
-  rounded: 'Poppins',
-  mono: 'Poppins',
+  sans: 'Poppins_400Regular',
+  serif: 'Poppins_400Regular',
+  rounded: 'Poppins_400Regular',
+  mono: 'Poppins_400Regular',
 };

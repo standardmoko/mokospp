@@ -56,10 +56,32 @@ export const DarkColors = {
 // Typography
 export const Typography = {
   fontFamily: Platform.select({
-    ios: 'Poppins',
-    android: 'Poppins',
+    ios: 'Poppins_400Regular',
+    android: 'Poppins_400Regular',
     default: 'System',
   }),
+  fontFamilies: {
+    regular: Platform.select({
+      ios: 'Poppins_400Regular',
+      android: 'Poppins_400Regular',
+      default: 'System',
+    }),
+    medium: Platform.select({
+      ios: 'Poppins_500Medium',
+      android: 'Poppins_500Medium',
+      default: 'System',
+    }),
+    semibold: Platform.select({
+      ios: 'Poppins_600SemiBold',
+      android: 'Poppins_600SemiBold',
+      default: 'System',
+    }),
+    bold: Platform.select({
+      ios: 'Poppins_700Bold',
+      android: 'Poppins_700Bold',
+      default: 'System',
+    }),
+  },
   sizes: {
     displayLarge: 32,
     displayMedium: 28,
@@ -172,65 +194,56 @@ export const GlobalStyles = StyleSheet.create({
 
   // Typography Styles
   displayLarge: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.bold,
     fontSize: Typography.sizes.displayLarge,
-    fontWeight: Typography.weights.bold,
     lineHeight: Typography.lineHeights.displayLarge,
     color: Colors.text,
   },
   displayMedium: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.bold,
     fontSize: Typography.sizes.displayMedium,
-    fontWeight: Typography.weights.bold,
     lineHeight: Typography.lineHeights.displayMedium,
     color: Colors.text,
   },
   heading1: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.heading1,
-    fontWeight: Typography.weights.semibold,
     lineHeight: Typography.lineHeights.heading1,
     color: Colors.text,
   },
   heading2: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.heading2,
-    fontWeight: Typography.weights.semibold,
     lineHeight: Typography.lineHeights.heading2,
     color: Colors.text,
   },
   heading3: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.medium,
     fontSize: Typography.sizes.heading3,
-    fontWeight: Typography.weights.medium,
     lineHeight: Typography.lineHeights.heading3,
     color: Colors.text,
   },
   bodyLarge: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.regular,
     fontSize: Typography.sizes.bodyLarge,
-    fontWeight: Typography.weights.regular,
     lineHeight: Typography.lineHeights.bodyLarge,
     color: Colors.text,
   },
   bodyMedium: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.regular,
     fontSize: Typography.sizes.bodyMedium,
-    fontWeight: Typography.weights.regular,
     lineHeight: Typography.lineHeights.bodyMedium,
     color: Colors.textLight,
   },
   bodySmall: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.regular,
     fontSize: Typography.sizes.bodySmall,
-    fontWeight: Typography.weights.regular,
     lineHeight: Typography.lineHeights.bodySmall,
     color: Colors.textLight,
   },
   caption: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.regular,
     fontSize: Typography.sizes.caption,
-    fontWeight: Typography.weights.regular,
     lineHeight: Typography.lineHeights.caption,
     color: Colors.textLighter,
   },
@@ -246,9 +259,8 @@ export const GlobalStyles = StyleSheet.create({
     ...Shadows.small,
   },
   primaryButtonText: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.button,
-    fontWeight: Typography.weights.semibold,
     color: Colors.white,
   },
   secondaryButton: {
@@ -261,9 +273,8 @@ export const GlobalStyles = StyleSheet.create({
     ...Shadows.small,
   },
   secondaryButtonText: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.button,
-    fontWeight: Typography.weights.semibold,
     color: Colors.white,
   },
   outlineButton: {
@@ -277,9 +288,8 @@ export const GlobalStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   outlineButtonText: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.button,
-    fontWeight: Typography.weights.semibold,
     color: Colors.primary,
   },
 
@@ -294,9 +304,8 @@ export const GlobalStyles = StyleSheet.create({
     minHeight: 36,
   },
   compactButtonText: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.bodyMedium,
-    fontWeight: Typography.weights.semibold,
     color: Colors.white,
   },
   compactOutlineButton: {
@@ -311,9 +320,8 @@ export const GlobalStyles = StyleSheet.create({
     minHeight: 36,
   },
   compactOutlineButtonText: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.bodyMedium,
-    fontWeight: Typography.weights.semibold,
     color: Colors.primary,
   },
 
@@ -328,16 +336,14 @@ export const GlobalStyles = StyleSheet.create({
     ...Shadows.small,
   },
   cardTitle: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.semibold,
     fontSize: Typography.sizes.heading3,
-    fontWeight: Typography.weights.semibold,
     color: Colors.text,
     marginBottom: Spacing.xs,
   },
   cardBody: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.regular,
     fontSize: Typography.sizes.bodyMedium,
-    fontWeight: Typography.weights.regular,
     color: Colors.textLight,
     lineHeight: Typography.lineHeights.bodyMedium,
   },
@@ -347,9 +353,8 @@ export const GlobalStyles = StyleSheet.create({
     marginVertical: Spacing.xs,
   },
   inputLabel: {
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.medium,
     fontSize: Typography.sizes.bodyMedium,
-    fontWeight: Typography.weights.medium,
     color: Colors.text,
     marginBottom: Spacing.xs,
   },
@@ -360,7 +365,7 @@ export const GlobalStyles = StyleSheet.create({
     borderRadius: BorderRadius.small,
     paddingVertical: Spacing.sm,
     paddingHorizontal: Spacing.md,
-    fontFamily: Typography.fontFamily,
+    fontFamily: Typography.fontFamilies.regular,
     fontSize: Typography.sizes.bodyLarge,
     color: Colors.text,
   },
