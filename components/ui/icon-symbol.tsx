@@ -1,7 +1,7 @@
 // Fallback for using MaterialIcons on Android and web.
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { SymbolWeight, SymbolViewProps } from 'expo-symbols';
+import { SymbolViewProps, SymbolWeight } from 'expo-symbols';
 import { ComponentProps } from 'react';
 import { OpaqueColorValue, type StyleProp, type TextStyle } from 'react-native';
 
@@ -14,10 +14,43 @@ type IconSymbolName = keyof typeof MAPPING;
  * - see SF Symbols in the [SF Symbols](https://developer.apple.com/sf-symbols/) app.
  */
 const MAPPING = {
+  // Navigation icons
   'house.fill': 'home',
+  'heart.fill': 'favorite',
+  'heart': 'favorite-border',
+  'person.fill': 'person',
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'chevron.left': 'chevron-left',
+  'chevron.up': 'keyboard-arrow-up',
+  'chevron.down': 'keyboard-arrow-down',
+  
+  // Quiz option icons
+  'square.stack.3d.up': 'layers',
+  'paintbrush': 'brush',
+  'house.heart': 'home',
+  'dollarsign.circle': 'attach-money',
+  'dollarsign.circle.fill': 'monetization-on',
+  'banknote': 'payments',
+  
+  // Photo upload icons
+  'camera': 'camera-alt',
+  'photo': 'photo-library',
+  'xmark': 'close',
+  'exclamationmark.triangle': 'warning',
+  'exclamationmark.triangle.fill': 'warning',
+  'lightbulb': 'lightbulb',
+  'desktopcomputer': 'computer',
+  'camera.viewfinder': 'camera',
+  'sparkles': 'auto-awesome',
+  'camera.rotate': 'camera-alt',
+  
+  // Other common icons
+  'trash': 'delete',
+  'gear': 'settings',
+  'message': 'message',
+  'pencil': 'edit',
 } as IconMapping;
 
 /**

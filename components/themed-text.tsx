@@ -1,5 +1,6 @@
 import { StyleSheet, Text, type TextProps } from 'react-native';
 
+import { Colors, Typography } from '@/constants/globalStyles';
 import { useThemeColor } from '@/hooks/use-theme-color';
 
 export type ThemedTextProps = TextProps & {
@@ -20,7 +21,7 @@ export function ThemedText({
   return (
     <Text
       style={[
-        { color },
+        { color, fontFamily: Typography.fontFamily },
         type === 'default' ? styles.default : undefined,
         type === 'title' ? styles.title : undefined,
         type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
@@ -35,26 +36,29 @@ export function ThemedText({
 
 const styles = StyleSheet.create({
   default: {
-    fontSize: 16,
-    lineHeight: 24,
+    fontSize: Typography.sizes.bodyLarge,
+    lineHeight: Typography.lineHeights.bodyLarge,
+    fontWeight: Typography.weights.regular,
   },
   defaultSemiBold: {
-    fontSize: 16,
-    lineHeight: 24,
-    fontWeight: '600',
+    fontSize: Typography.sizes.bodyLarge,
+    lineHeight: Typography.lineHeights.bodyLarge,
+    fontWeight: Typography.weights.semibold,
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    lineHeight: 32,
+    fontSize: Typography.sizes.displayLarge,
+    fontWeight: Typography.weights.bold,
+    lineHeight: Typography.lineHeights.displayLarge,
   },
   subtitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: Typography.sizes.heading2,
+    fontWeight: Typography.weights.semibold,
+    lineHeight: Typography.lineHeights.heading2,
   },
   link: {
-    lineHeight: 30,
-    fontSize: 16,
-    color: '#0a7ea4',
+    fontSize: Typography.sizes.bodyLarge,
+    lineHeight: Typography.lineHeights.bodyLarge,
+    color: Colors.primary,
+    fontWeight: Typography.weights.medium,
   },
 });

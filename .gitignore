@@ -1,43 +1,395 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
+# Dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Expo
 .expo/
 dist/
 web-build/
-expo-env.d.ts
 
-# Native
-.kotlin/
+# Native builds
 *.orig.*
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.keystore
+!debug.keystore
+
+# Generated native folders
+/ios
+/android
 
 # Metro
 .metro-health-check*
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+env.md
+
+# TypeScript
+*.tsbuildinfo
+*.d.ts
+!expo-env.d.ts
+
+# Build outputs
+build/
+dist/
+out/
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
 
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 *.pem
 
-# local env files
-.env*.local
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
 
-# typescript
-*.tsbuildinfo
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
 
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# OS generated files
+Icon?
+.Spotlight-V100
+.Trashes
+
+# Kotlin
+.kotlin/
+
+# Backend proxy (read-only reference)
+openai-backend-proxy-api-ReadOnly-DO-NOT-EDIT-/
+
+# Example files
 app-example
 
-# generated native folders
-/ios
-/android
+# Documentation files (for development reference only)
+docfile/
+
+# Asset images (company will use their own images with same names)
+assets/**/*.png
+assets/**/*.jpg
+assets/**/*.jpeg
+assets/**/*.gif
+assets/**/*.svg
+assets/**/*.webp
+assets/**/*.ico
+assets/**/*.bmp
+assets/**/*.tiff
+
+# Test files (if you don't want to include them)
+# __tests__/
+# *.test.js
+# *.test.ts
+# *.test.tsx
+# *.spec.js
+# *.spec.ts
+# *.spec.tsx
+
+# Storybook
+storybook-static/
+
+# Bundle analyzer
+.bundle-analyzer/
+
+# Sentry
+.sentryclirc
+
+# Local Netlify folder
+.netlify
+
+# Expo specific (expo-env.d.ts is kept - see TypeScript section)
+
+# Yarn
+yarn.lock
+.yarn/
+.pnp.*
+
+# Package manager lock files
+# Keep package-lock.json for npm (yarn.lock is excluded above)
+pnpm-lock.yaml
+
+# Expo development
+.expo-shared/
+
+# React Native specific
+.react-native/
+
+# Metro bundler cache
+.metro/
+
+# Flipper
+.flipper/
+
+# Xcode
+*.xcworkspace
+*.xcuserdata
+*.xcscheme
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/
+DerivedData/
+
+# Gradle
+.gradle/
+gradle.properties
+local.properties
+
+# Android Studio
+*.iml
+*.iws
+*.ipr
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Ruby
+.ruby-version
+.rbenv-version
+.rvmrc
+Gemfile.lock
+
+# Python (if using any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# JetBrains IDEs (covered in IDE settings and Android Studio sections above)
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Vim
+.netrwhist
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# WebStorm (covered in IDE settings above)
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Documentation build
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Additional React Native/Expo specific
+*.hprof
+*.jsbundle
+*.bundle
+
+# Modern development tools
+.turbo/
+.rush/
+.vercel/
+
+# AI/ML files (for AI services)
+*.model
+*.weights
+*.h5
+*.pkl
+
+# Additional mobile development
+*.dSYM/
+*.crash
+*.symbolication
+
+# React Native debugger
+rndebugger_logs/
+
+# Watchman
+.watchmanconfig
+
+
+# @generated expo-cli sync-2b81b286409207a5da26e14c78851eb30d8ccbdb
+# The following patterns were generated by expo-cli
+
+expo-env.d.ts
+# @end expo-cli
